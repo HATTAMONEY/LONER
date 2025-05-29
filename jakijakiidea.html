@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Certified Loner Coin Splash</title>
+  <style>
+    html, body {
+      height: 20%;
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url(../image/kat.JPG);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .coin-logo {
+      width: 220px;
+      height: 220px;
+      opacity: 0;
+      transform: scale(0.5);
+      transition: opacity 0.7s cubic-bezier(.68,-0.55,.27,1.55), 
+                  transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.38);
+      border-radius: 50%;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .coin-logo.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .coin-logo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #fff;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    }
+  </style>
+</head>
+<body>
+  <div class="coin-logo" id="coinLogo">
+    <img src="../image/logo.jpg" alt="Certified Loner Coin Logo">
+  </div>
+  <script>
+    const coinLogo = document.getElementById('coinLogo');
+    setTimeout(() => {
+      coinLogo.classList.add('show');
+      // Wait 10 seconds, then redirect
+      setTimeout(() => {
+        window.location.href = 'jakidea.html'; // Change this to your main page URL
+      }, 2000);
+    }, 400);
+  </script>
+</body>
+</html>
